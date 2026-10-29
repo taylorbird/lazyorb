@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Launcher for lazyorb.py. uv can take a few seconds to start Python, so say
+# something right away instead of leaving a blank prompt.
+printf '\033[1;35mlazyorb\033[0m starting…\n'
+exec uv run --quiet --script "$(dirname "$(readlink -f "$0")")/lazyorb.py" "$@"

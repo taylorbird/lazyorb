@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+
+# Claude Code work state: tracked by default. Uncomment to keep it local.
+# .claude/work/
