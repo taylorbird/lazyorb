@@ -25,4 +25,5 @@ Full ledger: .claude/work/constraints.md. Path-scoped rules: .claude/rules/.
 1. Run lazyorb in a real terminal; capture spinner timing on a slow launch to find where the ~1 minute goes.
 2. Run a real cleanup from the app and confirm the before/after Mac data-dir size changes.
 3. Choose a LICENSE.
-4. Consider caching the slow `docker system df` result or showing partial host data sooner.
+4. Harden workers: a scan exception or missing binary in `run_actions` currently crashes the app (Textual workers exit on error); also surface `sudo -n` failures instead of showing an empty breakdown.
+5. Consider caching the slow `docker system df` result or showing partial host data sooner.

@@ -5,6 +5,7 @@
 - No cleanup action has been run end-to-end from the app yet (only headless UI tests).
 - No LICENSE chosen yet for the public repo.
 - Should lazyorb grow into a broader cleaner (Mac-side caches, Xcode, Homebrew, etc.)?
+- Is this a real ongoing project or a one-off utility? Undecided as of 2026-10-28.
 
 ## Resolved
 - Builder name for buildx prune: node name minus trailing 0; run without sudo (resolved 2026-10-28).

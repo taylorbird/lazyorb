@@ -1,6 +1,20 @@
 # Work Log
 <!-- Entries prepended, newest first -->
 
+## 2026-10-28 18:40
+
+**Session Summary**: Pushed the initial commit to the public GitHub repo and ran a push review. Closed the session; whether lazyorb stays an ongoing project is undecided.
+
+**Decisions Made**:
+- Remote uses the personal SSH host alias: the default `github.com` SSH key authenticates as a different account, so the first push was denied.
+
+**Actions Taken**:
+- Pushed `main` with upstream tracking.
+- Push review found no secrets or identifiers; flagged worker crash-on-exception, uncaught missing-binary in `run_actions`, silent `sudo -n` failures, Docker 23+ requirement for `volume prune -a`, and no LICENSE.
+
+**Context/Thoughts**:
+- Hardening the workers is now Next Action 4 in current.md.
+
 ## 2026-10-28 18:22
 
 **Session Summary**: Investigated OrbStack disk usage by hand and found that buildx builders using the docker-container driver keep cache in a Docker volume that `docker builder prune` does not touch. On the user's setup these held tens of GB. Built a first flat-list version (orbclean), then rebuilt it as lazyorb, a lazygit-style UI organized per VM. Added a launcher message and in-app spinners to address a reported ~1 minute load time, fixed Pulumi detection and details-pane overflow, and moved the project into its own folder. The repo is now public on GitHub with README, .gitignore, and session files. Open items: the load-time cause, a real end-to-end cleanup, and a LICENSE.
